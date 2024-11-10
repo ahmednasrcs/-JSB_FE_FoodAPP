@@ -23,7 +23,7 @@ import Navbar from './modules/shared/components/Navbar/Navbar';
 import UserList from './modules/users/components/UserList/UserList';
 import AuthLayout from './modules/shared/components/AuthLayout/AuthLayout';
 import MasterLayout from './modules/shared/components/MasterLayout/MasterLayout';
-import Dashboard from './modules/dashboard/Dashboard/dashboard';
+import Dashboard from './modules/dashboard/Dashboard/Dashboard';
 import { ToastContainer } from 'react-toastify';
 import ForgetPass from './modules/authentication/components/ForgetPass/ForgetPass';
 
