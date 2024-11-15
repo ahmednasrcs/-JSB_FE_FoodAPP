@@ -1,14 +1,16 @@
-import React from 'react';
-import logo from '../../../../../FoodAppimages/logo.png'
+import React, { useState } from 'react';
+import logo from '/assets/FoodAppimages/43.png';
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Login = () => {
+const Login = ({saveLoginData}) => {
 
+       
     let navigate = useNavigate()
+    
     let {
         register,
         formState: { errors },
@@ -19,7 +21,9 @@ const Login = () => {
     const onSubmit = async (data) => {
         try {
             let response = await axios.post('https://upskilling-egypt.com:3006/api/v1/Users/Login', data)
-            console.log(response)
+            localStorage.setItem("token",response.data.token)
+             saveLoginData();
+            // console.log(response)
             toast.success('welcom')
             navigate('/dashboard')
         } catch (error) {

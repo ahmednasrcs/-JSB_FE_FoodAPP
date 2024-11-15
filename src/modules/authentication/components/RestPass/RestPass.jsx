@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../../../../FoodAppimages/logo.png'
+import logo from '/assets/FoodAppimages/43.png';
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';

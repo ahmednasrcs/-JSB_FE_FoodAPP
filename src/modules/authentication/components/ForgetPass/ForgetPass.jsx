@@ -1,11 +1,10 @@
 import React from 'react';
-import logo from '../../../../../FoodAppimages/logo.png'
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import logo from '/assets/FoodAppimages/43.png';
 const ForgetPass = () => {
     let navigate = useNavigate()
     let {

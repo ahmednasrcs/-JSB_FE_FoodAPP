@@ -1,9 +1,13 @@
 import React from 'react';
+import Header from '../../shared/components/Header/Header';
 
-const Dashboard = () => {
+const Dashboard = ( {loginData}) => {
     return (
         <div>
-            Dashboard
+            <Header 
+            title={`Welcome ${loginData?.userName}`}
+            
+            />
         </div>
     );
 }
