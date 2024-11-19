@@ -1,9 +1,10 @@
 import React from 'react';
+import noData from '/assets/FoodAppimages/delete.png';
 
 const NoData = () => {
     return (
-        <div>
-            NoData
+        <div className='text-center'>
+            <img src={noData} alt="" />
         </div>
     );
 }

@@ -2,7 +2,9 @@
 height: 100vh ;    
 }
 .auth-containner{
-    background-image: url(/assets/FoodAppimages/bacground.jpg);
+    background-image: url('/public/assets/FoodAppimages/bacground.jpg');
+    /* background-image: url('/assets/FoodAppimages/bacground.jpg'); */
+
     background-size: cover;
     background-position: center center;
 }

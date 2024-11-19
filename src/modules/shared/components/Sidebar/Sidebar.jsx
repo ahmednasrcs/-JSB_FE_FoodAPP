@@ -24,7 +24,7 @@ const SideBar = () => {
 
                         <MenuItem icon={<i className ="fa-solid fa-house mx-3"></i>} component={<Link to={'/dashboard'} />}>Home </MenuItem>
                         <MenuItem icon={<i className="fa-solid fa-user  mx-3"></i>} component={<Link to={'/dashboard/users'} />}>Users </MenuItem>
-                        <MenuItem icon={<i className="fa-solid fa-shapes  mx-3"></i>} component={<Link to={'/dashboard/recipe-data'} />}>Recipes </MenuItem>
+                        <MenuItem icon={<i className="fa-solid fa-shapes  mx-3"></i>} component={<Link to={'/dashboard/recipes'} />}>Recipes </MenuItem>
                         <MenuItem icon={<i className="fa-regular fa-calendar-days  mx-3"></i>} component={<Link to={'/dashboard/Categories'} />}>Categories </MenuItem>
                         <MenuItem icon={<i className="fa-solid fa-unlock-keyhole  mx-3"></i>} >Change Passowrd </MenuItem>
                         <MenuItem icon={<i className="fa-solid fa-right-from-bracket  mx-3"></i>} component={<Link to={'/login'} />}>Logout </MenuItem>

@@ -4,19 +4,14 @@ import Modal from 'react-bootstrap/Modal';
 import noData from '/assets/FoodAppimages/delete.png'
 
 
-const DeleteConfirmation = ({ deleteItem ,deletFun,toggleshow}) => {
+const DeleteConfirmation = ({ show,deleteItem ,deletFun,handleClose}) => {
 
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = (id) => {
-        // setSelectedID(id)    
-        toggleshow(true);}
+  
     return (
         <div>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
-                </Modal.Header>
+                 </Modal.Header>
                 <Modal.Body >
                     <div className=' text-center'>
                         <img src={noData} alt="noData" />
@@ -28,7 +23,7 @@ const DeleteConfirmation = ({ deleteItem ,deletFun,toggleshow}) => {
                 <Modal.Footer>
 
                     <Button variant="outline-danger" onClick={deletFun}>
-                        Delete This Item
+                        Delete This {deleteItem}
                     </Button>
                 </Modal.Footer>
             </Modal>

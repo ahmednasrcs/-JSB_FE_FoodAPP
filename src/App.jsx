@@ -8,7 +8,7 @@ import RestPass from './modules/authentication/components/RestPass/RestPass';
 import CategoryData from './modules/caterories/components/CategoryData/CategoryData';
 import CategoriesList from './modules/caterories/components/CategoriesList/CategoriesList';
 import RecipeData from './modules/recipes/components/RecipeData/RecipeData';
-import ReciprsList from './modules/recipes/components/ReciprsList/ReciprsList';
+import RecipesList from './modules/recipes/components/RecipesList/RecipesList';
 import NotFound from './modules/shared/components/NotFound/NotFound';
 import UserList from './modules/users/components/UserList/UserList';
 import AuthLayout from './modules/shared/components/AuthLayout/AuthLayout';
@@ -55,7 +55,7 @@ function App() {
       errorElement: <NotFound />,
       children: [
         { index: true, element: <Dashboard loginData={loginData} /> },
-        { path: 'recipes', element: <ReciprsList /> },
+        { path: 'recipes', element: <RecipesList /> },
         { path: 'recipe-data', element: <RecipeData /> },
         { path: 'Categories', element: <CategoriesList /> },
         { path: 'Category-data', element: <CategoryData /> },
