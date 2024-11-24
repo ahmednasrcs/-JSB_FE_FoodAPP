@@ -4,9 +4,9 @@ import axios from 'axios';
 import DeleteConfirmation from '../../../shared/components/DeleteConfirmation/DeleteConfirmation';
 import { imagbaseURl } from '../../../../services/urls/url';
 import NoData from '../../../shared/components/NoData/NoData';
+import { Link, useParams } from 'react-router-dom';
 
 const RecipesList = () => {
-    
     const [recipesList, setRecipesList] = useState([]);
     const [selectedID, setSelectedID] = useState();
     const [show, setShow] = useState(false);
@@ -17,7 +17,7 @@ const RecipesList = () => {
         setSelectedID(id);
         setShow(true);
     };
-
+        // take gateory
     let getRecipes = async () => {
         try {
             const response = await axios.get(
@@ -31,7 +31,7 @@ const RecipesList = () => {
             console.error(error);
         }
     };
-
+        // api delet
     const deleteRecipe = async () => {
         try {
             await axios.delete(
@@ -46,10 +46,12 @@ const RecipesList = () => {
             console.error(error);
         }
     };
-
+        // علشان تنادي علي api اول ما يرن 
     useEffect(() => {
         getRecipes();
     }, []);
+
+
 
     return (
         <>
@@ -65,7 +67,7 @@ const RecipesList = () => {
             />
             <div className="d-flex justify-content-between p-4">
                 <h5>Recipes Table Details</h5>
-                <button className="btn btn-success">Add New Recipes</button>
+                <Link to={"/dashboard/recipes/new-recipe"} className="btn btn-success">Add New Recipes</Link >
             </div>
             <div className="p-4">
                 {recipesList.length > 0 ? (
@@ -107,14 +109,16 @@ const RecipesList = () => {
                                             onClick={() => handleShow(recipe.id)}
                                             className="fa fa-trash mx-3 text-danger"
                                             style={{ cursor: 'pointer' }}
-                                            aria-hidden="true"
-                                        ></span>
-                                        <span
+                                            aria-hidden="true" ></span>
+                                            <Link to={`/dashboard/recipes/${recipe?.id}`}>
+                                            <span
                                             className="fa fa-edit text-warning"
                                             style={{ cursor: 'pointer' }}
                                             aria-hidden="true"
                                         ></span>
-                                    </td>
+                                    
+                                            </Link>
+                                            </td>
                                 </tr>
                             ))}
                         </tbody>

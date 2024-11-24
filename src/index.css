@@ -1,47 +1,69 @@
-.body{
-height: 100vh ;    
+.body {
+    height: 100vh;
 }
-.auth-containner{
+
+.auth-containner {
     background-image: url('/public/assets/FoodAppimages/bacground.jpg');
     /* background-image: url('/assets/FoodAppimages/bacground.jpg'); */
 
     background-size: cover;
     background-position: center center;
 }
-.bg-overlay{
-    background: linear-gradient(45deg,rgba(47,140,96,0.7),rgba(0,0,0,0.5));
+
+.bg-overlay {
+    background: linear-gradient(45deg, rgba(47, 140, 96, 0.7), rgba(0, 0, 0, 0.5));
 }
-.sidebar-container .ps-sidebar-container{
- background-color: #1F263E;
-;
- height: 100vh;
+
+.sidebar-container {
+    position: sticky;
+    align-self: flex-start;
+    background-color: #1F263E;
+    height: 100vh !important;
+    border-top-right-radius: 40px !important;
+    left: 0;
+    top: 0;
+
 }
-.sdebar-container{
-  
+.img-header{
+    img{
+        
+    }
+
 }
-.sidebar-container .ps-menu-button{
+.sidebar-container .ps-sidebar-container {
+    background-color: #1F263E;
+
+    height: 100vh;
+
+    border-top-right-radius: 40px !important;
+}
+
+.sidebar-container .ps-menu-button {
     color: #fff !important;
 }
-.sidebar-container .ps-menu-button:hover{
-    background-color: rgba(47,140,96,0.5) !important;
-   }
-   .sidebar-container .logo-menu-item :hover{
-    background-color:  transparent !important;
-   }
 
-   
-   .sidebar-container .img {
+.sidebar-container .ps-menu-button:hover {
+    background-color: rgba(47, 140, 96, 0.5) !important;
+}
+
+.sidebar-container .logo-menu-item :hover {
+    background-color: transparent !important;
+}
+
+
+.sidebar-container .img {
     width: 200px;
     /* margin-left: 60px; */
-   }
+}
 
-   .navbar .avatar{
+.navbar .avatar {
     height: 40px;
     width: 40px;
-   }
-   .header-container{
+}
+
+.header-container {
     background-image: url('./assets/FoodAppimages/header.jpg');
     background-size: cover;
     background-position: center;
-    
-   }
+
+}

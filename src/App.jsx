@@ -18,6 +18,7 @@ import { ToastContainer } from 'react-toastify';
 import ForgetPass from './modules/authentication/components/ForgetPass/ForgetPass';
 import { jwtDecode } from 'jwt-decode';
 import ProtectedRoute from './modules/shared/components/ProtectedRoute/ProtectedRoute';
+import RecipeForm from './modules/recipes/components/RecipeForm/RecipeForm';
 
 function App() {
 
@@ -55,7 +56,9 @@ function App() {
       errorElement: <NotFound />,
       children: [
         { index: true, element: <Dashboard loginData={loginData} /> },
-        { path: 'recipes', element: <RecipesList /> },
+        { path: 'recipes', element: <RecipesList loginData={loginData} /> },
+        { path: 'recipes/new-recipe', element: <RecipeForm/> },
+        { path: 'recipes/:recipeId', element: <RecipeForm /> },
         { path: 'recipe-data', element: <RecipeData /> },
         { path: 'Categories', element: <CategoriesList /> },
         { path: 'Category-data', element: <CategoryData /> },

@@ -1,0 +1,57 @@
+.header-wrapper {
+    background-color: #F0FFeF;
+    border-radius: 15px;
+    margin-inline: 2rem;
+    margin-top: 1.37rem;
+    padding-block: 2.625rem;
+    padding-inline: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-waepper {
+    max-width: 30rem;
+}
+
+.btn-primary {
+    background-color: #009247;
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    text-decoration: none;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.form-wrapper {
+    margin-inline: 8.5rem;
+    margin-block: 5.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .input-wrapper {
+        width: 100%;
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 1rem;
+            
+
+            ::placeholder {
+                color: rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+.actions-wapper{
+    display: flex;
+    justify-content: flex-end;
+    gap: 3.5rem;
+}
